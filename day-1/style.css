@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #09ac11;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: rgb(19, 176, 215);
+    background: linear-gradient(90deg, rgba(19, 176, 215, 1) 29%, rgba(18, 231, 30, 1) 100%);
+}
+
+.card {
+    position: relative;
+    margin: 120px auto;
+    padding: 20px;
+    width: 320px;
+    height: 400px;
+    border-radius: 16px;
+    color: #fff;
+    background: #272d40;
+}
+
+.card__heart,
+.card__cart {
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.card__heart {
+    left: 20px;
+}
+
+.card__cart {
+    right: 20px;
+}
+
+.card__img {
+    margin: 0 auto;
+    width: 200px;
+    transition: transform linear 0.3s;
+}
+
+.card:hover .card__img {
+    transform: translateY(-80px) rotate(-16deg);
+}
+
+.card__img img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.card__title,
+.card__price {
+    font-size: 20px;
+    text-align: center;
+    transition: transform linear 0.3s;
+}
+
+.card__title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.card:hover .card__title {
+    transform: translate(-64px, -80px);
+}
+
+.card__price {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.card:hover .card__price {
+    transform: translate(-118px, -80px);
+}
+
+.card__content {
+    margin-top: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: linear 0.3s;
+    transition-property: margin-top, opacity, visibility;
+}
+
+.card__size,
+.card__color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card:hover .card__content {
+    margin-top: -40px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card__size span {
+    margin: 0 4px;
+    padding: 1px 6px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #000;
+    background: #dadada;
+    cursor: pointer;
+}
+
+.card__color span {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+
+.card__color--green {
+    background: #09ac11;
+}
+
+.card__color--black {
+    background: #000;
+}
+
+.card__color--red {
+    background: #d11a2a;
+}
+
+.card__action button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+}
