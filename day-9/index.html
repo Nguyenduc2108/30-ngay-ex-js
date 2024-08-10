@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day 9 - Weather API</title>
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Style -->
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div id="weather" class="weather">
+            <input class="search" type="text" placeholder="Hãy vĩ độ cần tìm..." />
+            <div class="content">
+                <h1 class="capital">
+                    <span class="city">Hanoi</span>
+                    <span>,</span>
+                    <span class="country">VN</span>
+                </h1>
+                <time class="time">8/10/2024 8:04 AM</time>
+
+                <div class="temperature">
+                    <span class="value">23 <sup>o</sup>C</span>
+                </div>
+
+                <h2 class="short-desc">Clouds</h2>
+
+                <div class="weather-bottom">
+                    <div class="visibility">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="info">1000m</span>
+                    </div>
+                    <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <span class="info">2.1 m/s</span>
+                    </div>
+                    <div class="cloud">
+                        <i class="fa-solid fa-cloud"></i>
+                        <span class="info">90%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
