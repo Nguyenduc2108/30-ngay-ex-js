@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.control {
+    display: flex;
+    gap: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    color: #333;
+}
+
+.success {
+    background-color: #2ecc71;
+}
+
+.warning {
+    background-color: #f39c12;
+}
+
+.error {
+    background-color: #e74c3c;
+}
+
+.toasts {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 20px;
+    border-left: 4px solid #000;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideInOut 5s forwards;
+}
+
+.toast.toast--success {
+    border-color: #2ecc70c4;
+}
+
+.toast.toast--warning {
+    border-color: #f39c12c4;
+}
+
+.toast.toast--error {
+    border-color: #e74c3cc4;
+}
+
+.toast + .toast {
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.icon.icon-success {
+    color: #2ecc708f;
+}
+
+.icon.icon-warning {
+    color: #f39c128f;
+}
+
+.icon.icon-error {
+    color: #e74c3c8f;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    border-radius: 0 4px 4px 0;
+    animation: countdown 3s linear forwards;
+}
+
+@keyframes countdown {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(110%);
+    }
+
+    25% {
+        transform: translateX(-10%);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+.line.line-success {
+    background-color: #2ecc70c4;
+}
+
+.line.line-warning {
+    background-color: #f39c12c4;
+}
+
+.line.line-error {
+    background-color: #e74c3cc4;
+}
