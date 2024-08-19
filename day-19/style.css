@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #4fb2e7, #1371f4);
+}
+
+.tool > * {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    background: #fff;
+}
+
+.tool .save-btn {
+    margin-left: auto;
+}
+
+canvas {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #000;
+}
