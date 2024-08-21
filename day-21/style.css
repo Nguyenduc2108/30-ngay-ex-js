@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6f6c6c;
+    --secondary-color: #f9f9f9;
+    --white-color: #fff;
+    --toggle-bg: #ccc;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+}
+
+html.dark {
+    background: #333;
+    color: var(--white-color);
+}
+
+html.dark .content {
+    background: #444;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border-radius: 99px;
+    background: var(--toggle-bg);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transition: background 0.3s, left 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle {
+    background: var(--primary-color);
+}
+
+input[type="checkbox"]:checked + .toggle::before {
+    left: 50px;
+    background: var(--white-color);
+}
+
+.content {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--secondary-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
