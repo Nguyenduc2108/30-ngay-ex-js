@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.player {
+    width: 700px;
+}
+
+.play i {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer {
+    width: 150px;
+}
+
+.progress {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #ccc;
+}
+
+.progress-filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #f00;
+    /* width: 0;
+    transition: width 0.1s linear; */
+}
+
+.setting {
+    position: relative;
+}
+
+.setting-wrapper {
+    position: absolute;
+}
+
+.setting-speed.active,
+.setting-quality.active {
+    background: #333;
+    color: #fff;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+}
+
+.prev,
+.next,
+.setting {
+    width: 40px;
+    height: 20px;
+}
+
+.repeat,
+.prev,
+.next,
+.setting,
+.progress,
+.volume {
+    cursor: pointer;
+}

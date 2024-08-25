@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>25 - Custom Video Player</title>
+
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Style -->
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="player">
+            <video src="./video/chang-vang.mp4"></video>
+
+            <div class="controls">
+                <div class="repeat">
+                    <!-- <i class="fa-solid fa-rotate-right"></i> -->
+                </div>
+                <div class="play">
+                    <i class="fa-solid fa-play"></i>
+                    <!-- <i class="fa-solid fa-pause play-pause"></i> -->
+                </div>
+                <div class="timer">00:00/00:59</div>
+
+                <div class="progress">
+                    <div class="progress-filled"></div>
+                </div>
+
+                <div class="prev">
+                    <img src="./images/prev.svg" alt="" class="prev-img" />
+                </div>
+                <div class="next">
+                    <img src="./images/next.svg" alt="" class="next-img" />
+                </div>
+
+                <div class="setting">
+                    <img src="./images/setting.svg" alt="" class="setting-img" />
+                    <div class="setting-wrapper">
+                        <div class="setting-speed">
+                            <label for="speed">Speed:</label>
+                            <select name="speed" id="speed">
+                                <option value="0.5">0.5x</option>
+                                <option value="1" selected>1x</option>
+                                <option value="1.5">1.5x</option>
+                                <option value="2">2x</option>
+                            </select>
+                        </div>
+                        <div class="setting-quality">
+                            <label for="quality">Quality:</label>
+                            <select name="quality" id="quality">
+                                <option value="1080" selected>1080p</option>
+                                <option value="720">720p</option>
+                                <option value="480">480p</option>
+                                <option value="360">360p</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="volume">
+                    <div class="volume-icon">
+                        <i class="fa-solid fa-volume-high volume-icon"></i>
+                        <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+                    </div>
+                    <input type="range" min="0" max="1" step="0.05" class="volume-input" />
+                </div>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
