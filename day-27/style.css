@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ea21cf, #eaac01);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.25s linear;
+    transition-property: background, color;
+}
+
+.social-link:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50px);
+}
+
+.social-link.facebook:hover,
+.social-link.facebook:hover .tooltip {
+    background: #3b5998;
+    color: #fff;
+}
+
+.social-link.facebook:hover .tooltip::before {
+    border-top-color: #3b5998;
+}
+
+.social-link.twitter:hover,
+.social-link.twitter:hover .tooltip {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.social-link.twitter:hover .tooltip::before {
+    border-top-color: #1da1f2;
+}
+
+.social-link.instagram:hover,
+.social-link.instagram:hover .tooltip {
+    background: #c13584;
+    color: #fff;
+}
+
+.social-link.instagram:hover .tooltip::before {
+    border-top-color: #c13584;
+}
+
+.social-link.linkedin:hover,
+.social-link.linkedin:hover .tooltip {
+    background: #0077b5;
+    color: #fff;
+}
+
+.social-link.linkedin:hover .tooltip::before {
+    border-top-color: #0077b5;
+}
+
+.social-link.youtube:hover,
+.social-link.youtube:hover .tooltip {
+    background: #ff0000;
+    color: #fff;
+}
+
+.social-link.youtube:hover .tooltip::before {
+    border-top-color: #ff0000;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    padding: 4px 8px;
+    border-radius: 99px;
+    background: #fff;
+    filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, 0.4));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.25s linear;
+    transition-property: opacity, visibility, transform, background, color;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #fff;
+    transition: border-top-color 0.25s linear;
+}
