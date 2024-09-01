@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ea21cf, #eaac01);
+}
+
+.between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    width: 240px;
+    height: 40px;
+    padding: 0 40px 0 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-input i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.form-input i:first-of-type {
+    display: none;
+}
+
+.form-input.show i:first-of-type {
+    display: block;
+}
+
+.form-input.show i:last-of-type {
+    display: none;
+}
+
+.btn {
+    padding: 14px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ea21cf, #eaac01);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #eaac01, #ea21cf);
+}
+
+.validator {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    background: linear-gradient(135deg, #ea21cf, #eaac01);
+}
+
+.validator p {
+    padding: 5px;
+}
+
+.validator p::before {
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding: 10px;
+}
+
+.validator p.valid,
+.validator p.valid::before {
+    color: #ccc;
+}
+
+.validator p.valid::before {
+    content: "\f00c";
+}
